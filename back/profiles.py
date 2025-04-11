@@ -39,25 +39,50 @@ def update_settings(profile_name):
 
     print(f"Updated Current Profile Successfully!")    
 
+def options():
+    print("1. Select Profile")
+    print("2. List Profile")
+    print("99. Exit")
+
+def select_prof():
+    select_prof = input("Enter Profile You Want to select\n> ")
+    print(f"Selecting the profile {select_prof}")
+    if select_prof in prof_list:
+        print(f"Selected Profile: '{select_prof}'")
+        update_settings(select_prof)
+    else:
+        log.err("Profile Not Found! Try Again.")
+
+def list_prof():
+    print("🗂 Available Profiles:")
+    global prof_list
+    for i, profile in enumerate(list_profiles(), 1):
+        print(f"  {i}. {profile}")
+        prof_list.append(profile)
+
+
+
+
+
 def main():
     print("=== ⚙️ Configure Profile ===\n")
     
     log.info(f"Current Selected Profile: {curr_prof()}")
     log.info(f"Total Profiles: {total_prof()}\n")
-    
-    print("🗂 Available Profiles:")
-    for i, profile in enumerate(list_profiles(), 1):
-        print(f"  {i}. {profile}")
-        prof_list.append(profile)
-    
+
+    options()
     while True:
-        select_prof = input("Enter Profile You Want to select\n> ")
-        print(f"Selecting the profile {select_prof}")
-        if select_prof in prof_list:
-            print(f"Selected Profile: '{select_prof}'")
-            update_settings(select_prof)
+        opt = input("> ")
+        if opt == "1":
+            select_prof()
+        elif opt == "2":
+            list_prof()
+        elif opt == "99":
+            print("Exiting...")
+            exit()
         else:
-            log.err("Profile Not Found! Try Again.")
+            print("Error! Try again!")
+        
 
 if __name__ == "__main__":
     main()

@@ -13,8 +13,12 @@ def main():
         opt = input("> ")
         if opt == "1":
             print("All Scans")
+            
+
         elif opt == "2":
             print("Custom Scan")
+
+
         elif opt == "99":
             print("Exiting..")
             exit()
