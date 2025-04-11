@@ -50,7 +50,6 @@ def main():
         print(f"  {i}. {profile}")
         prof_list.append(profile)
     
-    print(prof_list)
     while True:
         select_prof = input("Enter Profile You Want to select\n> ")
         print(f"Selecting the profile {select_prof}")

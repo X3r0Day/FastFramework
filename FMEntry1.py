@@ -1,4 +1,6 @@
 from lib.format import log
+from back import profiles
+from back import settings
 
 intro = '''
 
@@ -49,15 +51,8 @@ intro = '''
 '''
 
 
-
-def conf_settings():
-    print()
-
-def conf_profiles():
-    print()
-
 def start():
-    print()
+    print("Test")
 
 def main():
     log.info(intro)
@@ -67,7 +62,7 @@ def main():
         print("99. Exit")
         opt = input("> ")
         if opt == "1":
-            conf_profiles()
+            profiles.main()
         elif opt == "2":
             start()
         elif opt == "99":
