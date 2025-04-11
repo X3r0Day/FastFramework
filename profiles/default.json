@@ -1,0 +1,6 @@
+{
+    "nmap": {
+        "scan-type": "Active",
+        "options": ["-sV", "-A"]
+    }
+}
