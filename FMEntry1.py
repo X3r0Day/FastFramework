@@ -1,12 +1,8 @@
 from lib.format import log
 from back import profiles
 from back import settings
+import engine
 
-intro = '''
-
-            Welcome to this framework!
-
-'''
 '''
 # Settings list
 nmap_opt = []
@@ -51,8 +47,6 @@ intro = '''
 '''
 
 
-def start():
-    print("Test")
 
 def main():
     log.info(intro)
@@ -64,7 +58,7 @@ def main():
         if opt == "1":
             profiles.main()
         elif opt == "2":
-            start()
+            engine.main()
         elif opt == "99":
             exit()
         else:
