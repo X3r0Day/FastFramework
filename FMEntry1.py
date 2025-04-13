@@ -1,6 +1,6 @@
 from lib.format import log
 from back import profiles
-from back import settings
+# from back import settings
 import engine
 
 '''
@@ -64,4 +64,5 @@ def main():
         else:
             pass
 
-main()
+if __name__ == "__main__":
+    main()

@@ -24,6 +24,7 @@ def main():
     target = input("Enter Your Target\n> ")
     print(f"Selected Target: '{target}'")
     scanning(target)
+    return target
 
 
 def scanning(targeted):
